@@ -8,6 +8,10 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-  <h1> My Awesome Movie! </h1>
+  <nav>
+    <a href="{{ route('home') }}">Home</a>
+    <a href="{{ route('movies.show')}}">Movies</a>
+  </nav>
+  <h1>{{ movie }}</h1>
 </body>
 </html>
