@@ -16,7 +16,7 @@
 
   <div class="grid grid-cols-3 gap-3">
     @each((movie, index) in movies)
-      @!component('components/movie/card', { movie })
+      @!movie.card({ movie })
     @end
   </div>
 </body>
