@@ -1,4 +1,7 @@
-# Another Awesome Movie
+---
+title: Another Awesome Movie
+summary: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur incidunt accusamus delectus 
+---
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur incidunt accusamus delectus
 quo nobis consectetur eaque rerum, magni hic aliquam, nisi ex illum voluptate expedita odio
