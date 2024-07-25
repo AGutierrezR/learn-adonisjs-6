@@ -2,5 +2,5 @@
 @let(nodeName = $props.has('href') ? 'a' : 'button')
 
 <{{ nodeName }} {{ $props.merge({ class: [className] }).toAttrs() }}>
-  {{ await $slots.main() }}
+  {{{ await $slots.main() }}}
 </{{ nodeName }}>
