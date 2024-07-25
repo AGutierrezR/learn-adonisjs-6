@@ -19,6 +19,7 @@ class CacheService {
   }
 
   async flushDb() {
+    console.log('Flushing Redis Database')
     return redis.flushdb()
   }
 }
