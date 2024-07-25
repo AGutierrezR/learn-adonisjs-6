@@ -14,24 +14,11 @@
 
   <h1> It Works! </h1>
 
-  <ul class="flex flex-col gap-4">
+  <div class="grid grid-cols-3 gap-3">
     @each((movie, index) in movies)
-    @let(isFirst = index == 0)
-
-    <li class="{{
-        html.classNames([
-          'p-4 border',
-          {
-            'border-blue-500': isFirst,
-            'border-slate-300': !isFirst
-          }
-        ])
-      }}">
-      <a href="{{ route('movies.show', { slug: movie.slug })}}">{{ movie.title }}</a>
-      <p class="text-slate-700">{{ truncate(movie.summary, 50, { completeWords: true }) }}</p>
-    </li>
+      @!component('components/movie/card', { movie })
     @end
-  </ul>
+  </div>
 </body>
 
 </html>
