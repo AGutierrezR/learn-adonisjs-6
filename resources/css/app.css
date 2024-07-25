@@ -1,10 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
+@layer base {
+  body {
+    min-height: 100vh;
+  }
+
+  h1 {
+    @apply text-3xl mt-6 mb-3 font-bold;
+  }
 }
