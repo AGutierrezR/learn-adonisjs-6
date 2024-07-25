@@ -14,5 +14,13 @@
     <a href="{{ route('movies.show', { slug: 'another-awesome-movie' })}}">Another Awesome Movie</a>
   </nav>
   <h1> It Works! </h1>
+
+  <ul>
+    @each(slug in slugs)
+    <li>
+      <a href="{{ route('movies.show', { slug })}}">{{ slug }}</a>
+    </li>
+    @end
+  </ul>
 </body>
 </html>

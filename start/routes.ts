@@ -14,7 +14,15 @@ import fs from 'node:fs/promises'
 import { MarkdownFile } from '@dimerapp/markdown'
 import { toHtml } from '@dimerapp/markdown/utils'
 
-router.on('/').render('pages/home').as('home')
+router
+  .get('/', async (ctx) => {
+    const url = app.makeURL('resources/movies')
+    const files = await fs.readdir(url)
+    const slugs = files.map((file) => file.replace('.md', ''))
+
+    return ctx.view.render('pages/home', { slugs })
+  })
+  .as('home')
 
 router
   .get('/movies/:slug', async (ctx) => {
