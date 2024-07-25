@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> AdonisJS - A fully featured web framework for Node.js </title>
-
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="max-w-3xl mx-auto mt-6">
-  @include('partials/nav')
+@layout()
+  @slot('meta')
+    <meta meta="description" content="Our Awesome Movie List" />
+  @endslot
 
   <h1> It Works! </h1>
 
   <div class="grid grid-cols-3 gap-3">
     @each((movie, index) in movies)
-      @!movie.card({ movie })
+    @!movie.card({ movie })
     @end
   </div>
 
   <div class="fixed bottom-0 right-3 flex gap-3">
     @button({ href: '#', class: 'rounded-b-none'})
-      Flush Redis Db
+    Flush Redis Db
     @end
   </div>
-</body>
 
-</html>
+@end
